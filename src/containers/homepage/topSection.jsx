@@ -55,17 +55,17 @@ function TopSection(props) {
     return (
       <Element name="topSection">
         <TopContainer>
-           <Router> <Navbar/> </Router>
+           <Navbar/>
             <Marginer direction="vertical" margin="13em"/>
         
         <Marginer direction="vertical" margin="0em"/>
         <FirstText>Heading</FirstText>
         <SecondText>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</SecondText>
-        <Router><Link to='/Begin'>
+        <Link to='/Begin'>
                   <Button buttonSize='btn--wide' buttonColor='blue'>
                      Get Started <MdSlowMotionVideo/>
                   </Button>
-                </Link></Router>
+                </Link>
                 <DownArrowContainer onClick={scrollToNextSection}>
                     <DownArrow/>
                 </DownArrowContainer>
