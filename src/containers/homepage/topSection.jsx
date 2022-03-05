@@ -34,7 +34,7 @@ const SecondText=styled.h2`
 display: flex;
 justify-content: left;
 align-items: left;
-margin-left:30px;
+margin-left:100px;
 
 
 
@@ -60,7 +60,7 @@ function TopSection(props) {
         
         <Marginer direction="vertical" margin="0em"/>
         <FirstText>Heading</FirstText>
-        <SecondText>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</SecondText>
+        <SecondText>Lorem ipsum, dolor sit amet .</SecondText>
         <Link to='/Begin'>
                   <Button buttonSize='btn--wide' buttonColor='blue'>
                      Get Started <MdSlowMotionVideo/>

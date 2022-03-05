@@ -5,11 +5,15 @@ import styled from "styled-components";
 import { Marginer } from "../../components/marginer";
 import { useMediaQuery } from "react-responsive";
 import thirdsecbg from "../../images/thirdbg.png"
+import 'bootstrap/dist/css/bootstrap.css';
+import Carousel from 'react-bootstrap/Carousel';
+import { Link } from "react-router-dom";
 
 
 import "pure-react-carousel/dist/react-carousel.es.css";
 
-import User1Img from "../../images/Res.jpeg";
+import Template1 from "../../images/Res.jpeg";
+import Template2 from "../../images/template2.png"
 import RT from "../../components/Cards";
 
 
@@ -69,28 +73,34 @@ export default function ThirdSection(props) {
     <TempContainer>
       <Thirdsectitle>Resume Template</Thirdsectitle>
       <Marginer direction="vertical" margin="3em" />
-      <StyledCarouselProvider
-        naturalSlideWidth={200}
-        naturalSlideHeight={isMobile ? 250 : 205}
-        totalSlides={4}
-        visibleSlides={isMobile ? 1 : 2}
-        dragEnabled={false}
-      >
-        <Slider>
-          <StyledSlide index={0}>
-          
-            <RT
-              reviewText=" Lorem6"
-              username="Technical"
-              userImgUrl={User1Img}
-              href="/Resume"
-            />
+      <div style={{ display: 'block', width: 700, padding: 30 }}>
+      <Carousel>
+        <Carousel.Item interval={1500}>
+        <Link to="/body">
+          <img
+            className="d-block w-100"
+src={Template1}
+            alt=" One" width="350px" height="550px"
             
-          
-          </StyledSlide>
-        </Slider>
-        <StyledDotGroup />
-      </StyledCarouselProvider>
+          /></Link>
+          <Carousel.Caption>
+            <h3>Label for first slide</h3>
+            <p>Sample Text for Image One</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={500}>
+        <Link to="/body">
+          <img
+            className="d-block w-100"
+src={Template2}
+            alt=" Two" width="350px" height="550px"
+          /></Link>
+          <Carousel.Caption>
+    
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    </div>
     </TempContainer>
     
   );
